@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 if CODESPACE_NAME:
     ALLOWED_HOSTS.append(f"{CODESPACE_NAME}-8000.app.github.dev")
     ALLOWED_HOSTS.append(CODESPACE_NAME)
-ALLOWED_HOSTS.append('*')  # For dev convenience, but can be removed for production
+# Do not use wildcard in dev for security; only allow explicit hosts
 
 
 # Application definition
