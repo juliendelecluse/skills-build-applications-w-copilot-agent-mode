@@ -6,13 +6,18 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
+import './App.css';
+import logo from '../../docs/octofitapp-small.png';
 
 function App() {
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
         <Container>
-          <Navbar.Brand as={Link} to="/">OctoFit Tracker</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            <img src={logo} alt="OctoFit Logo" />
+            OctoFit Tracker
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -25,14 +30,14 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container className="mt-4">
+      <Container>
         <Routes>
           <Route path="/activities" element={<Activities />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/teams" element={<Teams />} />
           <Route path="/users" element={<Users />} />
           <Route path="/workouts" element={<Workouts />} />
-          <Route path="/" element={<h2>Welcome to OctoFit Tracker!</h2>} />
+          <Route path="/" element={<h2 className="text-center">Welcome to OctoFit Tracker!</h2>} />
         </Routes>
       </Container>
     </>

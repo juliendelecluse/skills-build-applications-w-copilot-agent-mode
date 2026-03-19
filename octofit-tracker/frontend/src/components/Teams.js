@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Table, Card } from 'react-bootstrap';
 
 const endpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`;
 
@@ -18,14 +19,27 @@ function Teams() {
   }, []);
 
   return (
-    <div>
-      <h2>Teams</h2>
-      <ul>
-        {data.map((item, idx) => (
-          <li key={item.id || idx}>{JSON.stringify(item)}</li>
-        ))}
-      </ul>
-    </div>
+    <Card>
+      <Card.Body>
+        <Card.Title as="h2" className="mb-4">Teams</Card.Title>
+        <Table striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, idx) => (
+              <tr key={item.id || idx}>
+                <td>{item.id || idx + 1}</td>
+                <td><pre style={{margin:0}}>{JSON.stringify(item, null, 2)}</pre></td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </Card.Body>
+    </Card>
   );
 }
 
