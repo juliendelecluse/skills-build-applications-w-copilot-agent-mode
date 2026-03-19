@@ -1,0 +1,82 @@
+/* App.css - OctoFit Tracker custom styles */
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #22223b;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: #ffbe0b !important;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  background: #f7fff7;
+  border: 1px solid #a0c4ff;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+}
+
+.table {
+  background: #f1faee;
+  color: #22223b;
+  border-color: #3a86ff;
+}
+
+.table thead {
+  background: #3a86ff;
+  color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: #e0eafc;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #8338ec;
+  color: #ffbe0b;
+}
+
+h2, h3, h4 {
+  color: #3a86ff;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+a {
+  color: #3a86ff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffbe0b;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+/* Favicon style (not CSS, but for reference) */
